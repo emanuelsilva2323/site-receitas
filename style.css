@@ -1,0 +1,319 @@
+* {
+
+    margin: 0;
+    
+    padding: 0;
+    
+    box-sizing: border-box;
+    
+    }
+    
+    
+    
+    body {
+    
+    /* --- FUNDO DE IMAGEM --- */
+    
+    background-image: url('fundo.jpg'); /* Nome do seu arquivo de imagem */
+    
+    background-size: cover; /* Garante que a imagem cubra todo o corpo */
+    
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    
+    background-position: center; /* Centraliza a imagem */
+    
+    /* --- ESTILIZAÇÃO GERAL --- */
+    
+    font-family: 'Arial', sans-serif;
+    
+    line-height: 1.6;
+    
+    color: #333;
+    
+    }
+    
+    
+    
+    /* Os conteúdos do site precisam de um fundo sólido para legibilidade */
+    
+    main section {
+    
+    background-color: rgba(245, 245, 245, 0.95); /* Fundo quase branco para legibilidade */
+    
+    padding: 40px 20px;
+    
+    text-align: center;
+    
+    margin-bottom: 20px;
+    
+    }
+    
+    
+    
+    /* --- HEADER e NAVEGAÇÃO --- */
+    
+    header {
+    
+    background: #d15400; /* Laranja vibrante */
+    
+    color: #fff;
+    
+    padding: 1rem 0;
+    
+    text-align: center;
+    
+    }
+    
+    
+    
+    header h1 {
+    
+    margin-bottom: 1rem;
+    
+    }
+    
+    
+    
+    header nav ul {
+    
+    list-style: none;
+    
+    padding: 0;
+    
+    }
+    
+    
+    
+    header nav ul li {
+    
+    display: inline;
+    
+    margin: 0 15px;
+    
+    }
+    
+    
+    
+    header nav ul li a {
+    
+    color: #fff;
+    
+    text-decoration: none;
+    
+    font-weight: bold;
+    
+    }
+    
+    
+    
+    header nav ul li a:hover {
+    
+    text-decoration: underline;
+    
+    }
+    
+    
+    
+    /* --- SEÇÕES GERAIS --- */
+    
+    section h2 {
+    
+    font-size: 2rem;
+    
+    margin-bottom: 20px;
+    
+    color: #d15400;
+    
+    }
+    
+    
+    
+    #sobre p {
+    
+    max-width: 800px;
+    
+    margin: 0 auto 20px auto;
+    
+    }
+    
+    
+    /* --- NOVO ESTILO PARA A FAIXA DE CATEGORIA --- */
+    .recipe-category-title {
+        background-color: #d15400; /* Cor Laranja */
+        color: #fff;
+        padding: 15px 0; /* Espaçamento vertical interno */
+        margin: 30px auto 20px auto; /* Espaçamento externo (superior, lateral e inferior) */
+        font-size: 1.8rem;
+        text-align: center;
+        /* Alinha com a largura máxima do grid, mas garante responsividade */
+        max-width: 1200px; 
+        width: 90%; 
+        border-radius: 5px;
+    }
+    
+    
+    /* --- GRID DE RECEITAS --- */
+    
+    .recipe-grid {
+    
+    display: grid;
+    
+    /* Configuração responsiva para 4 receitas ou mais */
+    
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    gap: 20px;
+    
+    max-width: 1200px;
+    
+    margin: 0 auto;
+    /* Adiciona uma margem inferior para separar os dois grids de receitas */
+    margin-bottom: 30px; 
+    
+    }
+    
+    
+    
+    .recipe-card {
+    
+    background: #fff;
+    
+    border-radius: 8px;
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    overflow: hidden;
+    
+    text-align: center;
+    
+    padding-bottom: 20px;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    }
+    
+    
+    
+    .recipe-card:hover {
+    
+    transform: translateY(-5px);
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    }
+    
+    
+    
+    .recipe-card img {
+    
+    width: 100%;
+    
+    height: 200px;
+    
+    object-fit: cover;
+    
+    }
+    
+    
+    
+    .recipe-card h3 {
+    
+    font-size: 1.5rem;
+    
+    margin: 15px 0 10px 0;
+    
+    color: #d15400;
+    
+    }
+    
+    
+    
+    .recipe-card p {
+    
+    font-size: 0.95rem;
+    
+    margin-bottom: 15px;
+    
+    padding: 0 15px;
+    
+    }
+    
+    
+    
+    .recipe-link {
+    
+    display: inline-block;
+    
+    background: #d15400;
+    
+    color: #fff;
+    
+    padding: 10px 20px;
+    
+    text-decoration: none;
+    
+    border-radius: 5px;
+    
+    transition: background 0.3s ease;
+    
+    }
+    
+    
+    
+    .recipe-link:hover {
+    
+    background: #e07020; /* Laranja um pouco mais escuro no hover */
+    
+    }
+    
+    
+    
+    /* --- FOOTER --- */
+    
+    footer {
+    
+    background: #d15400;
+    
+    color: #fff;
+    
+    text-align: center;
+    
+    padding: 20px 0;
+    
+    margin-top: 30px;
+    
+    }
+    
+    
+    
+    /* --- RESPONSIVIDADE BÁSICA --- */
+    
+    @media (max-width: 768px) {
+    
+    header nav ul li {
+    
+    display: block;
+    
+    margin-bottom: 10px;
+    
+    }
+    
+    
+    
+    section h2 {
+    
+    font-size: 1.8rem;
+    
+    }
+    
+    
+    
+    .recipe-grid {
+    
+    /* Permite que o grid se ajuste, mas pode ser redundante devido ao auto-fit */
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    }
+    
+    }

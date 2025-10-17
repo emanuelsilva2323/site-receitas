@@ -1,0 +1,189 @@
+/* Configurações Globais */
+:root {
+    --color-primary: #d15400; /* Vinho/Bordô para títulos e destaques */
+    --color-secondary: #d15400; /* Verde azeitona/vegetal */
+    --color-background: #f8f8f8;
+    --color-text: #333;
+    --color-light-gray: #ddd;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--color-secondary);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-light-gray);
+}
+
+/* --- Seção da Receita (Recipe Header) --- */
+.recipe-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--color-light-gray);
+}
+
+.recipe-header h2 {
+    color: var(--color-primary);
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+.recipe-header img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Conteúdo da Receita --- */
+.recipe-content h3 {
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* Wrapper para Detalhes e Ingredientes (Flexbox) */
+.details-and-ingredients-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.recipe-details, .ingredients {
+    flex: 1; /* Distribui o espaço igualmente */
+    min-width: 280px; /* Garante tamanho mínimo antes de quebrar */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 6px;
+}
+
+.recipe-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-details li {
+    padding: 5px 0;
+    border-bottom: 1px dotted var(--color-light-gray);
+}
+
+.detail-icon {
+    font-size: 1.1em;
+    margin-right: 8px;
+    color: var(--color-primary);
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.ingredients li {
+    padding: 3px 0;
+}
+
+/* --- Modo de Preparo (Instructions) --- */
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 10px;
+    border-left: 3px solid var(--color-secondary);
+}
+
+/* --- Dicas do Chef (Notes) --- */
+.notes {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e0f7e0; /* Fundo suave para dicas */
+    border-left: 5px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+.notes h3 {
+    color: var(--color-primary);
+    border-bottom: none;
+    margin-top: 0;
+}
+
+.notes p {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--color-primary);
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsividade (Para telas muito pequenas) */
+@media (max-width: 600px) {
+    .details-and-ingredients-wrapper {
+        flex-direction: column; /* Empilha os blocos em telas pequenas */
+    }
+
+    .recipe-details, .ingredients {
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}
